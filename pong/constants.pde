@@ -13,13 +13,13 @@ float ballX=displayWidth/2, ballY=0;
 float ballVx=BALL_VELOCITY, ballVy=5; // ballVx is always BALL_VELOCTY or -BALL_VELOCITY; ballVy varies.
 float ballRadius = 10;
 int ballColor = 255;
+float ax,ay;
 
 // Y - position of Left and Right paddles
 float leftPaddle=displayHeight/2, rightPaddle=displayHeight/2;
 // Paddle Dimensions
 float paddleLength = 180, paddleWidth = 20;
 int paddleColor = 255;
-float buffer=paddleLength/2;
 
 // Score Variables
 int leftScore=0, rightScore=0;
@@ -36,3 +36,4 @@ char RESET = 'r', PAUSE = 'p', START = 's';
 // Keyoard Handling Booleans
 boolean left_up, right_up, left_down, right_down;
 boolean reset, pause, start;
+boolean gamestate=true;

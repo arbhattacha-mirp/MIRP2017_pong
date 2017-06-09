@@ -3,11 +3,15 @@ void updateBallVelocity() {
   //top
   if(ballY<ballRadius)
   {ballVy=-ballVy;
-  ballY=ballRadius;}
+  ballY=ballRadius;
+ ax=ballVx;
+   ay=ballVy;}
   //bottom
   if(ballY>displayHeight-ballRadius){
     ballVy=-ballVy;
-    ballY=displayHeight-ballRadius;}
+    ballY=displayHeight-ballRadius;
+ ax=ballVx;
+   ay=ballVy;  }
     // If collides with left wall, right player gains one point
   if(ballX<=ballRadius)
   leftLose();
@@ -22,7 +26,9 @@ void updateBallVelocity() {
     ballX=ballRadius+paddleWidth;
     
   ballVy=(2*BALL_VELOCITY*(ballY-leftPaddle)/(paddleLength) -BALL_VELOCITY);
-  println(ballVy);
+   ax=ballVx;
+   ay=ballVy;
+  //println(ballVy);
     }
   }
   //right paddle
@@ -32,8 +38,9 @@ void updateBallVelocity() {
     {ballVx=-ballVx;
     ballX=displayWidth-ballRadius-paddleWidth;
    ballVy=(2*BALL_VELOCITY*(ballY-rightPaddle)/(paddleLength) -BALL_VELOCITY);
-   
-  println(ballVy);
+   ax=ballVx;
+   ay=ballVy;
+  //println(ballVy);
     }
   }
   // If collide with paddle, or top/bottom wall, then bounce off

@@ -3,6 +3,8 @@ void rightLose() {
     displayScores();
     delay(100);
     ballVx=-ballVx;
+     ax=ballVx;
+   ay=ballVy;
    
 }
 
@@ -11,5 +13,7 @@ void leftLose() {
     displayScores();
     delay(100);
     ballVx=-ballVx;
+     ax=ballVx;
+   ay=ballVy;
     
 }
